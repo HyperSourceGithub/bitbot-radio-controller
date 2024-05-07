@@ -42,21 +42,26 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    radio.sendString("Walker")
-    basic.showLeds(`
-        # . . . #
-        # . . . #
-        # . . . #
-        # . # . #
-        # # . # #
-        `)
+    if (mode == Auto) {
+        radio.sendString("Walker")
+        basic.showLeds(`
+            # . . . #
+            # . . . #
+            # . . . #
+            # . # . #
+            # # . # #
+            `)
+    } else {
+        radio.sendNumber(0)
+    }
 })
-let Remote = 0
 let modes: string[] = []
-let modeLetter: string[] = []
 let Auto = 0
+let modeLetter: string[] = []
+let Remote = 0
 let mode = 0
 radio.setGroup(42)
 Init_List()
-mode = Auto
+Init_Mode_Variables()
+mode = Remote
 basic.showString("" + (modeLetter[mode]))
