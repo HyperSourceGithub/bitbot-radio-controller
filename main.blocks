@@ -1,0 +1,19 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="`0DXHU#}_O}4SzgkVD.M" x="0" y="0"><statement name="HANDLER"><block type="radio_set_group" id="Cv7:@-;J/%6Fn_,Y@7a1"><value name="ID"><shadow type="math_number_minmax" id="vV=NJ{(=,SFlJb,:sVo+"><mutation min="0" max="255" label="Id" precision="0"></mutation><field name="SLIDER">42</field></shadow></value></block></statement></block><block type="device_button_event" id="#7bOTq`L4,oIB/=/@tD*" x="289" y="109"><field name="NAME">Button.A</field><statement name="HANDLER"><block type="radio_datagram_send_string" id="fG(zS=z)U94:bX~a[y?R"><value name="msg"><shadow type="text" id="ESX!CzO3rVk1cZFU)9Hx"><field name="TEXT">Leleka</field></shadow></value><next><block type="device_show_leds" id="=BT@6pwIlH_Ufz:Uihi!"><field name="LEDS">`
+        # . . . . 
+        # . . . . 
+        # . . . . 
+        # . . . . 
+        # # # # #
+        `</field></block></next></block></statement></block><block type="device_button_event" id="Sa?OCCu8x2zD0)0+S*kZ" x="802" y="154"><field name="NAME">Button.B</field><statement name="HANDLER"><block type="radio_datagram_send_string" id="f;FtIQuce~Q4X:QBPAvW"><value name="msg"><shadow type="text" id="MS=LV,dEL%r`Z_#?|kmM"><field name="TEXT">Lotta</field></shadow></value><next><block type="device_show_leds" id="hcJ}`i8%-P{=ygjl^~#C"><field name="LEDS">`
+        # . # # # 
+        # . # . # 
+        # . # # # 
+        # . . . . 
+        # # # # #
+        `</field></block></next></block></statement></block><block type="input_logo_event" id=")6Deq$X4*!Q$1}sM)p;P" x="317" y="510"><field name="action">TouchButtonEvent.Pressed</field><statement name="HANDLER"><block type="radio_datagram_send_string" id="{BGyRDRSr`Y2Z4pCL@_?"><value name="msg"><shadow type="text" id="e|uiwerRY|B.:$|4F@Jb"><field name="TEXT">Walker</field></shadow></value><next><block type="device_show_leds" id="~]vo0OoDsm?~W_;O4cZz"><field name="LEDS">`
+        # . . . # 
+        # . . . # 
+        # . . . # 
+        # . # . # 
+        # # . # #
+        `</field></block></next></block></statement></block></xml>
