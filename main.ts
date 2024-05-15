@@ -1,3 +1,13 @@
+input.onPinPressed(TouchPin.P0, function () {
+    if (isReady == true) {
+        if (mode == Remote) {
+            radio.sendNumber(-1)
+            music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.InBackground)
+        } else {
+        	
+        }
+    }
+})
 input.onButtonPressed(Button.A, function () {
     if (isReady == true) {
         if (mode == Auto) {
@@ -57,6 +67,16 @@ input.onButtonPressed(Button.B, function () {
         } else {
             radio.sendNumber(2)
             music.play(music.tonePlayable(659, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground)
+        }
+    }
+})
+input.onGesture(Gesture.Shake, function () {
+    if (isReady == true) {
+        if (mode == Remote) {
+            radio.sendNumber(0)
+            music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.InBackground)
+        } else {
+        	
         }
     }
 })
