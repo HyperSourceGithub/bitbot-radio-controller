@@ -1,20 +1,3 @@
-input.onPinPressed(TouchPin.P0, function () {
-    if (isReady == true) {
-        if (mode == Remote) {
-            radio.sendNumber(-1)
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.InBackground)
-            basic.showLeds(`
-                . . # . .
-                . . # . .
-                # . # . #
-                . # # # .
-                . . # . .
-                `)
-        } else {
-        	
-        }
-    }
-})
 input.onButtonPressed(Button.A, function () {
     if (isReady == true) {
         if (mode == Auto) {
@@ -29,13 +12,6 @@ input.onButtonPressed(Button.A, function () {
         } else {
             radio.sendNumber(1)
             music.play(music.tonePlayable(659, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground)
-            basic.showLeds(`
-                . . # . .
-                . # . . .
-                # # # # #
-                . # . . .
-                . . # . .
-                `)
         }
     }
 })
@@ -46,15 +22,8 @@ function Init_List () {
 input.onGesture(Gesture.ScreenDown, function () {
     if (isReady == true) {
         if (mode == Remote) {
-            radio.sendNumber(0)
+            radio.sendNumber(-1)
             music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.InBackground)
-            basic.showLeds(`
-                . # # # .
-                # . . . #
-                # . # . #
-                # . . . #
-                . # # # .
-                `)
         } else {
         	
         }
@@ -69,13 +38,6 @@ input.onButtonPressed(Button.AB, function () {
         if (mode == Remote) {
             radio.sendNumber(12)
             music.play(music.tonePlayable(392, music.beat(BeatFraction.Quarter)), music.PlaybackMode.InBackground)
-            basic.showLeds(`
-                . . # . .
-                . # # # .
-                # . # . #
-                . . # . .
-                . . # . .
-                `)
         } else {
         	
         }
@@ -90,39 +52,15 @@ input.onButtonPressed(Button.B, function () {
                 # . # . #
                 # . # # #
                 # . . . .
-                # . # # #
+                # # # # #
                 `)
         } else {
             radio.sendNumber(2)
             music.play(music.tonePlayable(659, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground)
-            basic.showLeds(`
-                . . # . .
-                . . . # .
-                # # # # #
-                . . . # .
-                . . # . .
-                `)
         }
     }
 })
 input.onGesture(Gesture.Shake, function () {
-    if (isReady == true) {
-        if (mode == Remote) {
-            radio.sendNumber(0)
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.InBackground)
-            basic.showLeds(`
-                . # # # .
-                # . . . #
-                # . # . #
-                # . . . #
-                . # # # .
-                `)
-        } else {
-        	
-        }
-    }
-})
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     if (isReady == true) {
         if (mode == Auto) {
             radio.sendString("Walker")
@@ -136,13 +74,6 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         } else {
             radio.sendNumber(0)
             music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.InBackground)
-            basic.showLeds(`
-                . # # # #
-                # . . . #
-                # . # . #
-                # . . . #
-                . # # # .
-                `)
         }
     }
 })
